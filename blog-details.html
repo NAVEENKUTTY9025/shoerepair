@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr" class="scroll-smooth w-full overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="SoleRestore Blog Details - In-depth articles on shoe care, leather restoration, artisan techniques, and sustainable fashion.">
+    <title>SoleRestore | Blog Details - Leather Restoration Insights</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23111111'/%3E%3Cpath d='M30 50 L70 50 M30 60 L70 60 M50 30 L50 70' stroke='%238B5E3C' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* ===== CSS VARIABLES - LIGHT MODE (DEFAULT) ===== */
+        :root {
+            --primary: #111111;
+            --secondary: #8B5E3C;
+            --accent: #A47148;
+            --white: #FFFFFF;
+            --bg-main: #FFFFFF;
+            --bg-alt: #F5F5F5;
+            --bg-card: #FFFFFF;
+            --text-heading: #111111;
+            --text-body: #333333;
+            --text-light: #666666;
+            --border-light: 1px solid rgba(139, 94, 60, 0.15);
+            --border-medium: 1px solid rgba(139, 94, 60, 0.3);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+            --navbar-bg: #111111;
+            --footer-bg: #111111;
+        }
+
+        /* ===== DARK MODE VARIABLES ===== */
+        [data-theme="dark"] {
+            --primary: #111111;
+            --secondary: #8B5E3C;
+            --accent: #A47148;
+            --white: #FFFFFF;
+            --bg-main: #0A0A0A;
+            --bg-alt: #141414;
+            --bg-card: #1A1A1A;
+            --text-heading: #FFFFFF;
+            --text-body: #CCCCCC;
+            --text-light: #999999;
+            --border-light: 1px solid rgba(139, 94, 60, 0.2);
+            --border-medium: 1px solid rgba(139, 94, 60, 0.4);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+            --navbar-bg: #0A0A0A;
+            --footer-bg: #0A0A0A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* RTL Support */
+        [dir="rtl"] {
+            text-align: right;
+        }
+
+        [dir="rtl"] .logo {
+            flex-direction: row-reverse;
+        }
+
+        [dir="rtl"] .nav-link i,
+        [dir="rtl"] .btn-primary i,
+        [dir="rtl"] .btn-secondary i,
+        [dir="rtl"] .btn-outline i {
+            margin-right: 0;
+            margin-left: 8px;
+        }
+
+        [dir="rtl"] .dropdown-menu {
+            left: auto;
+            right: 0;
+        }
+
+        [dir="rtl"] .mobile-nav-link:hover {
+            padding-left: 0;
+            padding-right: 24px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-heading);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: clamp(2rem, 4vw, 3.5rem); }
+        h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-top: 32px; margin-bottom: 16px; }
+        h3 { font-size: clamp(1.25rem, 2.5vw, 1.6rem); margin-top: 24px; margin-bottom: 12px; }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        /* ===== NAVBAR (Same as blog.html) ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--navbar-bg);
+            height: 75px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: var(--shadow-md);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background-color: var(--secondary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .logo-icon i {
+            color: var(--white);
+            font-size: 22px;
+        }
+
+        .logo:hover .logo-icon {
+            background-color: var(--accent);
+            transform: scale(1.05);
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            color: var(--secondary);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-link {
+            color: var(--white);
+            text-decoration: none;
+            padding: 10px 16px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-link i {
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary);
+            background-color: rgba(139, 94, 60, 0.1);
+        }
+
+        .nav-link.active {
+            color: var(--secondary);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--navbar-bg);
+            border-radius: 8px;
+            min-width: 180px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255,255,255,0.1);
+            z-index: 100;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 12px 20px;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(139, 94, 60, 0.15);
+            color: var(--secondary);
+            padding-left: 25px;
+        }
+
+        .dropdown:hover .nav-link i {
+            transform: rotate(180deg);
+        }
+
+        .navbar-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .theme-toggle, .rtl-toggle {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 10px;
+            color: var(--white);
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover, .rtl-toggle:hover {
+            background-color: var(--secondary);
+            transform: scale(1.05);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--white);
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 75px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--navbar-bg);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 999;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mobile-theme-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .mobile-theme-toggle, .mobile-rtl-toggle {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 10px;
+            color: var(--white);
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-close-btn {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 10px;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-nav-link {
+            display: block;
+            color: var(--white);
+            text-decoration: none;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-link:hover {
+            color: var(--secondary);
+            padding-left: 24px;
+        }
+
+        .mobile-dropdown-btn {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: var(--white);
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 16px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            cursor: pointer;
+        }
+
+        .mobile-dropdown-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: rgba(255,255,255,0.03);
+            border-radius: 8px;
+        }
+
+        .mobile-dropdown-content.active {
+            max-height: 300px;
+        }
+
+        .mobile-dropdown-content a {
+            display: block;
+            padding: 12px 20px;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+        }
+
+        .mobile-auth-buttons {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--secondary);
+            background-color: rgba(139, 94, 60, 0.1);
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--white);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        /* ===== BLOG DETAILS PAGE SPECIFIC STYLES ===== */
+        .blog-details-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: flex-end;
+            padding-top: 100px;
+            padding-bottom: 60px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .blog-details-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 100%);
+            z-index: 1;
+        }
+
+        .blog-details-hero .container {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-category {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+        }
+
+        .blog-details-hero h1 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: clamp(1.8rem, 5vw, 3.2rem);
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 24px;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-meta i {
+            margin-right: 6px;
+            color: var(--secondary);
+        }
+
+        /* Article Content */
+        .article-container {
+            padding: 60px 0 80px;
+            background-color: var(--bg-main);
+        }
+
+        .article-wrapper {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            border-radius: 30px;
+            padding: 50px;
+            box-shadow: var(--shadow-sm);
+            border: var(--border-light);
+        }
+
+        .article-content {
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .article-content p {
+            margin-bottom: 24px;
+            color: var(--text-body);
+        }
+
+        .article-content h2 {
+            color: var(--text-heading);
+            margin-top: 40px;
+            margin-bottom: 16px;
+        }
+
+        .article-content h3 {
+            color: var(--text-heading);
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        .article-content ul, .article-content ol {
+            margin-bottom: 24px;
+            padding-left: 24px;
+        }
+
+        .article-content li {
+            margin-bottom: 10px;
+        }
+
+        .article-content blockquote {
+            border-left: 4px solid var(--secondary);
+            padding-left: 24px;
+            margin: 30px 0;
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .article-img {
+            margin: 30px 0;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .article-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .img-caption {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 8px;
+        }
+
+        /* Author Box */
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: var(--bg-alt);
+            padding: 25px;
+            border-radius: 20px;
+            margin: 50px 0 30px;
+            flex-wrap: wrap;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Share Section */
+        .share-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-top: 30px;
+            border-top: var(--border-light);
+            margin-top: 20px;
+        }
+
+        .share-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .share-link {
+            width: 40px;
+            height: 40px;
+            background-color: var(--bg-alt);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-body);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .share-link:hover {
+            background-color: var(--secondary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Back Button */
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: gap 0.3s;
+        }
+
+        .back-button:hover {
+            gap: 15px;
+        }
+
+        /* Related Posts */
+        .related-section {
+            padding: 60px 0;
+            background-color: var(--bg-alt);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .related-card {
+            background-color: var(--bg-card);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: var(--border-light);
+            text-decoration: none;
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .related-img {
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .related-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .related-card:hover .related-img img {
+            transform: scale(1.05);
+        }
+
+        .related-content {
+            padding: 20px;
+        }
+
+        .related-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text-heading);
+        }
+
+        .related-content p {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--footer-bg);
+            padding: 60px 0 30px;
+            color: var(--white);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 20px 0;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            border: none;
+            z-index: 99;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .nav-menu, .navbar-right { display: none; }
+            .mobile-menu-btn { display: block; }
+            .related-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .related-grid, .footer-grid { grid-template-columns: 1fr; }
+            .article-wrapper { padding: 25px; }
+            .blog-details-hero { min-height: 50vh; }
+            .author-box { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo"><div class="logo-icon"><i class="fas fa-shoe-prints"></i></div><span class="logo-text">Sole<span>Restore</span></span></a>
+            <div class="nav-menu">
+                <div class="dropdown"><a href="index.html" class="nav-link">Home <i class="fas fa-chevron-down"></i></a><div class="dropdown-menu"><a href="index.html" class="dropdown-item">Home 1</a><a href="#" class="dropdown-item">Home 2</a></div></div>
+                <a href="about.html" class="nav-link">About</a><a href="service.html" class="nav-link">Services</a><a href="gallery.html" class="nav-link">Gallery</a><a href="pricing.html" class="nav-link">Pricing</a><a href="blog.html" class="nav-link active">Blog</a><a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="navbar-right"><button class="theme-toggle" id="desktopThemeToggle"><i class="fas fa-moon" id="desktopThemeIcon"></i></button><button class="rtl-toggle" id="desktopRtlToggle"><i class="fas fa-arrow-right"></i></button><a href="login.html" class="btn-outline"><i class="fas fa-sign-in-alt"></i> Login</a><a href="register.html" class="btn-outline"> <i class="fas fa-user-plus"></i> Register</a></div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header"><div class="mobile-theme-group"><button class="mobile-theme-toggle" id="mobileThemeToggle"><i class="fas fa-moon"></i></button><button class="mobile-rtl-toggle" id="mobileRtlToggle"><i class="fas fa-arrow-right"></i></button></div><button class="mobile-close-btn" id="mobileCloseBtn"><i class="fas fa-times"></i></button></div>
+        <button class="mobile-dropdown-btn" id="mobileHomeDropdownBtn">Home <i class="fas fa-chevron-down"></i></button><div class="mobile-dropdown-content" id="mobileHomeDropdown"><a href="index.html">Home 1</a><a href="#">Home 2</a></div>
+        <a href="about.html" class="mobile-nav-link">About</a><a href="service.html" class="mobile-nav-link">Services</a><a href="gallery.html" class="mobile-nav-link">Gallery</a><a href="pricing.html" class="mobile-nav-link">Pricing</a><a href="blog.html" class="mobile-nav-link active">Blog</a><a href="contact.html" class="mobile-nav-link">Contact</a>
+        <div class="mobile-auth-buttons"><a href="login.html" class="btn-outline"><i class="fas fa-sign-in-alt"></i> Login</a><a href="register.html" class="btn-outline"> <i class="fas fa-user-plus"></i>Register</a></div>
+    </div>
+
+    <!-- Dynamic Blog Details Hero Section -->
+    <section class="blog-details-hero" id="blogHero" style="background-image: url('https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+        <div class="container">
+            <span class="hero-category" id="heroCategory">Shoe Care</span>
+            <h1 id="heroTitle">The Ultimate Guide to Patina Shoe Care</h1>
+            <div class="hero-meta">
+                <span><i class="fas fa-calendar-alt"></i> <span id="heroDate">March 15, 2025</span></span>
+                <span><i class="fas fa-clock"></i> <span id="heroReadTime">6 min read</span></span>
+                <span><i class="fas fa-user"></i> <span id="heroAuthor">Marco Rossi</span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="article-container">
+        <div class="container">
+            <a href="blog.html" class="back-button"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+            <div class="article-wrapper animate-fadeInUp">
+                <div class="article-content" id="articleContent">
+                    <!-- Dynamic content loaded via JavaScript -->
+                </div>
+                
+                <!-- Author Box -->
+                <div class="author-box">
+                    <img src="https://images.pexels.com/photos/3782187/pexels-photo-3782187.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Author" class="author-avatar">
+                    <div class="author-info">
+                        <h4 id="authorName">Marco Rossi</h4>
+                        <p id="authorBio">Head Artisan with 25+ years of experience in luxury shoe restoration. Certified by the Italian Leather Consortium.</p>
+                    </div>
+                </div>
+                
+                <!-- Share Section -->
+                <div class="share-section">
+                    <span><i class="fas fa-share-alt"></i> Share this article:</span>
+                    <div class="share-links">
+                        <a href="#" class="share-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="share-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="share-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="share-link"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Posts -->
+    <section class="related-section">
+        <div class="container">
+            <h2 style="text-align: center;">You Might Also Like</h2>
+            <div class="related-grid" id="relatedPosts">
+                <!-- Dynamic related posts -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about"><a href="#" class="logo"><div class="logo-icon"><i class="fas fa-shoe-prints"></i></div><span class="logo-text">Sole<span>Restore</span></span></a><p>Premium mobile shoe repair and leather restoration services. We bring expert craftsmanship directly to your doorstep.</p><div class="footer-social"><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a><a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a><a href="#" class="social-icon"><i class="fab fa-yelp"></i></a></div></div>
+                <div><h4>Services</h4><ul class="footer-links"><li><a href="#">Sole Replacement</a></li><li><a href="#">Leather Restoration</a></li><li><a href="#">Custom Patina</a></li><li><a href="#">Heel Repair</a></li></ul></div>
+                <div><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+                <div><h4>Join Newsletter</h4><p style="color:rgba(255,255,255,0.7); margin-bottom:16px;">Get shoe care tips and exclusive offers.</p><form><input type="email" placeholder="Your email address" style="width:100%; padding:12px; border-radius:10px; border:none; margin-bottom:10px;"><button style="width:100%; padding:12px; background-color:var(--secondary); color:white; border:none; border-radius:10px; cursor:pointer;">Subscribe</button></form></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 SoleRestore. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        // Theme & RTL logic
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        const updateIcons = (theme) => { const icon = theme === 'dark' ? 'fa-sun' : 'fa-moon'; if(document.getElementById('desktopThemeIcon')) document.getElementById('desktopThemeIcon').className = `fas ${icon}`; if(document.getElementById('mobileThemeIcon')) document.getElementById('mobileThemeIcon').className = `fas ${icon}`; };
+        updateIcons(savedTheme);
+        const toggleTheme = () => { const isDark = html.getAttribute('data-theme') === 'dark'; const newTheme = isDark ? 'light' : 'dark'; html.setAttribute('data-theme', newTheme); localStorage.setItem('theme', newTheme); updateIcons(newTheme); };
+        document.getElementById('desktopThemeToggle')?.addEventListener('click', toggleTheme);
+        document.getElementById('mobileThemeToggle')?.addEventListener('click', toggleTheme);
+        
+        const savedDir = localStorage.getItem('direction') || 'ltr';
+        html.setAttribute('dir', savedDir);
+        const toggleRTL = () => { const dir = html.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl'; html.setAttribute('dir', dir); localStorage.setItem('direction', dir); };
+        document.getElementById('desktopRtlToggle')?.addEventListener('click', toggleRTL);
+        document.getElementById('mobileRtlToggle')?.addEventListener('click', toggleRTL);
+        
+        // Mobile menu
+        const menuBtn = document.getElementById('mobileMenuBtn'), mobileMenu = document.getElementById('mobileMenu'), closeBtn = document.getElementById('mobileCloseBtn');
+        menuBtn?.addEventListener('click', () => mobileMenu.classList.add('active'));
+        closeBtn?.addEventListener('click', () => mobileMenu.classList.remove('active'));
+        document.getElementById('mobileHomeDropdownBtn')?.addEventListener('click', function(){ this.classList.toggle('active'); document.getElementById('mobileHomeDropdown').classList.toggle('active'); });
+        document.querySelectorAll('.mobile-nav-link, .mobile-dropdown-content a').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('active')));
+        
+        // Scroll to top
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => scrollBtn.classList.toggle('visible', window.scrollY > 300));
+        scrollBtn?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        
+        // Blog Data (dynamic content based on URL parameter)
+        const blogPostsData = {
+            1: {
+                id: 1,
+                title: "The Ultimate Guide to Patina Shoe Care",
+                category: "Shoe Care",
+                date: "March 15, 2025",
+                readTime: "6 min read",
+                author: "Marco Rossi",
+                authorBio: "Head Artisan with 25+ years of experience in luxury shoe restoration. Certified by the Italian Leather Consortium.",
+                heroImage: "https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg?auto=compress&cs=tinysrgb&w=1600",
+                content: `<p>Patina is the soul of premium leather footwear. Unlike standard factory finishes, patina develops naturally over time, creating unique color variations and depth that tell the story of your shoes. In this comprehensive guide, our master craftsman Marco Rossi shares professional techniques to maintain and enhance your leather's natural patina.</p>
+                <div class="article-img"><img src="https://images.pexels.com/photos/2105415/pexels-photo-2105415.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Patina leather shoes"><div class="img-caption">Natural patina development on premium leather</div></div>
+                <h2>Why Patina Matters</h2>
+                <p>Patina isn't just about aesthetics—it's a protective layer that develops as oils from your skin and the environment interact with the leather's surface. A well-maintained patina can extend your shoes' lifespan by years while making each pair uniquely yours.</p>
+                <h3>Daily Care Routine</h3>
+                <ul><li>Use a horsehair brush before and after each wear</li><li>Rotate your shoes to allow leather to breathe</li><li>Store with cedar shoe trees to maintain shape</li><li>Avoid direct heat sources that can crack the patina</li></ul>
+                <blockquote>"The beauty of patina is that no two pairs are ever identical. It's the fingerprint of your journey with the shoes." — Marco Rossi</blockquote>
+                <h2>Professional Restoration Techniques</h2>
+                <p>When your shoes need more than basic care, our atelier offers specialized patina refreshing services. We use only Italian-certified creams and polishes that nourish the leather without stripping its character.</p>
+                <div class="article-img"><img src="https://images.pexels.com/photos/1061135/pexels-photo-1061135.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Shoe polishing tools"><div class="img-caption">Professional restoration tools and creams</div></div>
+                <p>Whether you're dealing with scuffs, discoloration, or dried-out leather, our mobile service can restore your shoes to their former glory. Book a free consultation today and let our experts breathe new life into your beloved footwear.</p>`
+            },
+            2: {
+                id: 2,
+                title: "Reviving Vintage Leather: Before & After",
+                category: "Restoration",
+                date: "March 8, 2025",
+                readTime: "8 min read",
+                author: "Elena Conti",
+                authorBio: "Leather Specialist with 18 years of experience in handbag restoration and exotic leathers.",
+                heroImage: "https://images.pexels.com/photos/2105415/pexels-photo-2105415.jpeg?auto=compress&cs=tinysrgb&w=1600",
+                content: `<p>Vintage leather carries history, character, and memories. When a client brought us a 1960s Italian leather briefcase passed down from their grandfather, we knew this restoration would be special. Here's how we brought this family heirloom back to life.</p>
+                <div class="article-img"><img src="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Vintage leather restoration"><div class="img-caption">The 1960s briefcase before restoration</div></div>
+                <h2>The Assessment Process</h2>
+                <p>Every restoration begins with a thorough evaluation. We examine the leather's condition, hardware integrity, stitching, and any structural issues. This particular briefcase had severe drying, cracked edges, and a broken handle.</p>
+                <h3>Step-by-Step Restoration</h3>
+                <ul><li>Gentle cleaning with pH-balanced leather cleaner</li><li>Hydration treatment with natural oils</li><li>Color matching and touch-up</li><li>Hardware polishing and replacement where needed</li><li>Handle reconstruction using original techniques</li></ul>
+                <blockquote>"The moment we saw the original owner's initials embossed inside, we knew we had to preserve every authentic detail." — Elena Conti</blockquote>
+                <div class="article-img"><img src="https://images.pexels.com/photos/1300424/pexels-photo-1300424.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Restored leather bag"><div class="img-caption">The fully restored briefcase - good for another 60 years</div></div>
+                <p>The final result? A beautifully restored briefcase that honors its heritage while being fully functional for daily use. Vintage leather restoration isn't just about repair—it's about preserving stories.</p>`
+            }
+        };
+        
+        // Get post ID from URL parameter
+        function getPostId() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('id');
+        }
+        
+        // Load post data
+        function loadPost() {
+            const postId = getPostId();
+            const post = blogPostsData[postId] || blogPostsData[1];
+            
+            // Update hero section
+            document.getElementById('blogHero').style.backgroundImage = `url('${post.heroImage}')`;
+            document.getElementById('heroCategory').textContent = post.category;
+            document.getElementById('heroTitle').textContent = post.title;
+            document.getElementById('heroDate').textContent = post.date;
+            document.getElementById('heroReadTime').textContent = post.readTime;
+            document.getElementById('heroAuthor').textContent = post.author;
+            document.getElementById('authorName').textContent = post.author;
+            document.getElementById('authorBio').textContent = post.authorBio;
+            document.getElementById('articleContent').innerHTML = post.content;
+            
+            // Update related posts (exclude current)
+            const relatedContainer = document.getElementById('relatedPosts');
+            const otherPosts = Object.values(blogPostsData).filter(p => p.id != postId);
+            relatedContainer.innerHTML = otherPosts.map(post => `
+                <a href="blog-details.html?id=${post.id}" class="related-card">
+                    <div class="related-img"><img src="${post.heroImage}" alt="${post.title}"></div>
+                    <div class="related-content"><h4>${post.title}</h4><p>${post.category} • ${post.readTime}</p></div>
+                </a>
+            `).join('');
+        }
+        
+        loadPost();
+        
+        // Animation observer
+        const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){ e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.animate-fadeInUp').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(30px)'; observer.observe(el); });
+    </script>
+</body>
+</html>

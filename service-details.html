@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="SoleRestore - Premium Mobile Shoe Repair & Leather Restoration Service Details">
+    <title>SoleRestore | Service Details</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23111111'/%3E%3Cpath d='M30 50 L70 50 M30 60 L70 60 M50 30 L50 70' stroke='%238B5E3C' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===== CSS VARIABLES - LIGHT MODE (DEFAULT) ===== */
+        :root {
+            --primary: #111111;
+            --secondary: #8B5E3C;
+            --accent: #A47148;
+            --white: #FFFFFF;
+            --bg-main: #FFFFFF;
+            --bg-alt: #F5F5F5;
+            --bg-card: #FFFFFF;
+            --text-heading: #111111;
+            --text-body: #333333;
+            --text-light: #666666;
+            --border-light: 1px solid rgba(139, 94, 60, 0.15);
+            --border-medium: 1px solid rgba(139, 94, 60, 0.3);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+            --navbar-bg: #111111;
+            --footer-bg: #111111;
+        }
+
+        /* ===== DARK MODE VARIABLES ===== */
+        [data-theme="dark"] {
+            --primary: #111111;
+            --secondary: #8B5E3C;
+            --accent: #A47148;
+            --white: #FFFFFF;
+            --bg-main: #0A0A0A;
+            --bg-alt: #141414;
+            --bg-card: #1A1A1A;
+            --text-heading: #FFFFFF;
+            --text-body: #CCCCCC;
+            --text-light: #999999;
+            --border-light: 1px solid rgba(139, 94, 60, 0.2);
+            --border-medium: 1px solid rgba(139, 94, 60, 0.4);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+            --navbar-bg: #0A0A0A;
+            --footer-bg: #0A0A0A;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            width: 100%;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* RTL Support */
+        [dir="rtl"] {
+            text-align: right;
+        }
+
+        [dir="rtl"] .logo {
+            flex-direction: row-reverse;
+        }
+
+        [dir="rtl"] .nav-link i,
+        [dir="rtl"] .btn-primary i {
+            margin-right: 0;
+            margin-left: 8px;
+        }
+
+        [dir="rtl"] .feature-item i {
+            margin-left: 12px;
+            margin-right: 0;
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--navbar-bg);
+            height: 75px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background-color: var(--secondary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .logo-icon i {
+            color: var(--white);
+            font-size: 22px;
+        }
+
+        .logo:hover .logo-icon {
+            background-color: var(--accent);
+            transform: scale(1.05);
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            color: var(--secondary);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-link {
+            color: var(--white);
+            text-decoration: none;
+            padding: 10px 16px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--secondary);
+            background-color: rgba(139, 94, 60, 0.1);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--navbar-bg);
+            border-radius: 8px;
+            min-width: 180px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255,255,255,0.1);
+            z-index: 100;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 12px 20px;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(139, 94, 60, 0.15);
+            color: var(--secondary);
+            padding-left: 25px;
+        }
+
+        .dropdown:hover .nav-link i {
+            transform: rotate(180deg);
+        }
+
+        .navbar-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .theme-toggle, .rtl-toggle {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 10px;
+            color: var(--white);
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover, .rtl-toggle:hover {
+            background-color: var(--secondary);
+            transform: scale(1.05);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--white);
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 75px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--navbar-bg);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 999;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mobile-theme-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .mobile-theme-toggle, .mobile-rtl-toggle {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 10px;
+            color: var(--white);
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .mobile-close-btn {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 10px;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .mobile-nav-link {
+            display: block;
+            color: var(--white);
+            text-decoration: none;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mobile-nav-link:hover {
+            color: var(--secondary);
+            padding-left: 24px;
+        }
+
+        .mobile-auth-buttons {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--secondary);
+            background-color: rgba(139, 94, 60, 0.1);
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--white);
+            border: none;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-heading);
+            border: 2px solid var(--secondary);
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* ===== HERO SECTION WITH BACKGROUND IMAGE ===== */
+        .hero-details {
+            padding: 140px 0 80px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero-details::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%);
+            z-index: 0;
+        }
+
+        .hero-details .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-details h1 {
+            color: var(--white);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 16px;
+        }
+
+        .hero-details p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        /* ===== SERVICE DETAILS SECTION ===== */
+        .service-details-section {
+            padding: 80px 0;
+            background-color: var(--bg-main);
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .details-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            color: var(--text-heading);
+        }
+
+        .details-content h3 {
+            font-size: 1.3rem;
+            margin: 24px 0 16px;
+            color: var(--text-heading);
+        }
+
+        .details-content p {
+            color: var(--text-body);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+            padding: 10px 0;
+            border-bottom: var(--border-light);
+        }
+
+        .feature-item i {
+            width: 24px;
+            color: var(--secondary);
+            font-size: 1.1rem;
+        }
+
+        .feature-item span {
+            color: var(--text-body);
+            font-size: 0.95rem;
+        }
+
+        .pricing-box {
+            background-color: var(--bg-card);
+            border-radius: 24px;
+            padding: 30px;
+            border: var(--border-light);
+            box-shadow: var(--shadow-md);
+            position: sticky;
+            top: 100px;
+        }
+
+        .pricing-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+            margin: 20px 0;
+        }
+
+        .price small {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+        .pricing-box ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .pricing-box ul li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            color: var(--text-body);
+            font-size: 0.9rem;
+        }
+
+        .pricing-box ul li i {
+            color: var(--secondary);
+        }
+
+        .btn-block {
+            width: 100%;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        /* Related Services */
+        .related-section {
+            padding: 60px 0;
+            background-color: var(--bg-alt);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .related-card {
+            background-color: var(--bg-card);
+            border-radius: 20px;
+            padding: 25px;
+            border: var(--border-light);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--secondary);
+        }
+
+        .related-card i {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .related-card h4 {
+            color: var(--text-heading);
+            margin-bottom: 10px;
+        }
+
+        .related-card p {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--footer-bg);
+            padding: 60px 0 30px;
+            color: var(--white);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 20px 0;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .footer h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            border: none;
+            z-index: 99;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media (max-width: 1024px) {
+            .nav-menu, .navbar-right { display: none; }
+            .mobile-menu-btn { display: block; }
+            .details-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .related-grid { grid-template-columns: 1fr; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeInUp { animation: fadeInUp 0.6s ease forwards; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-shoe-prints"></i></div>
+                <span class="logo-text">Sole<span>Restore</span></span>
+            </a>
+            <div class="nav-menu">
+                <div class="dropdown">
+                    <a href="index.html" class="nav-link">Home <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item">Home 1</a>
+                        <a href="#" class="dropdown-item">Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="service.html" class="nav-link active">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="navbar-right">
+                <button class="theme-toggle" id="desktopThemeToggle"><i class="fas fa-moon" id="desktopThemeIcon"></i></button>
+                <button class="rtl-toggle" id="desktopRtlToggle"><i class="fas fa-arrow-right"></i></button>
+                <a href="login.html" class="btn-outline"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="register.html" class="btn-outline"><i class="fas fa-user-plus"></i> Register</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="mobile-theme-group">
+                <button class="mobile-theme-toggle" id="mobileThemeToggle"><i class="fas fa-moon"></i></button>
+                <button class="mobile-rtl-toggle" id="mobileRtlToggle"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            <button class="mobile-close-btn" id="mobileCloseBtn"><i class="fas fa-times"></i></button>
+        </div>
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="service.html" class="mobile-nav-link">Services</a>
+        <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+        <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+        <a href="blog.html" class="mobile-nav-link">Blog</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <div class="mobile-auth-buttons">
+            <a href="login.html" class="btn-outline"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="register.html" class="btn-outline"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+    </div>
+
+    <!-- Hero Section with Dynamic Background Image -->
+    <section class="hero-details" id="heroSection" style="background-image: url('https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&w=1600&h=600&dpr=2');">
+        <div class="container">
+            <span class="hero-badge" id="serviceBadge">Premium Service</span>
+            <h1 id="serviceTitle">Sole Replacement</h1>
+            <p id="serviceShortDesc">Professional restoration using premium materials and traditional craftsmanship techniques.</p>
+            <a href="#" class="btn-primary" id="bookNowBtn"><i class="fas fa-calendar-check"></i> Book This Service</a>
+        </div>
+    </section>
+
+    <!-- Service Details Content -->
+    <section class="service-details-section">
+        <div class="container">
+            <div class="details-grid">
+                <div class="details-content animate-fadeInUp" id="detailsContent">
+                    <h2>About This Service</h2>
+                    <p id="fullDescription">Our sole replacement service restores your beloved footwear to like-new condition. Using premium Vibram or Italian leather soles, we carefully remove the worn sole, prepare the surface, and attach the new sole with precision stitching or bonding. Each pair undergoes quality inspection before return.</p>
+                    
+                    <h3>What's Included</h3>
+                    <ul class="feature-list" id="includedList">
+                        <li class="feature-item"><i class="fas fa-check-circle"></i><span>Premium Vibram or Italian leather soles</span></li>
+                        <li class="feature-item"><i class="fas fa-check-circle"></i><span>Full sole and heel replacement</span></li>
+                        <li class="feature-item"><i class="fas fa-check-circle"></i><span>Original stitch pattern matching</span></li>
+                        <li class="feature-item"><i class="fas fa-check-circle"></i><span>Edge finishing and polishing</span></li>
+                        <li class="feature-item"><i class="fas fa-check-circle"></i><span>6-month workmanship warranty</span></li>
+                    </ul>
+
+                    <h3>Process</h3>
+                    <p>We start with a thorough inspection of your shoes. Then we carefully remove the old sole, prepare the welt or bonding surface, and attach the new premium sole. Finally, we edge finish, polish, and perform quality control checks before returning your restored shoes.</p>
+                    
+                    <h3>Turnaround Time</h3>
+                    <p>Standard service: 5-7 business days. Express service available for an additional fee (2-3 business days).</p>
+                </div>
+
+                <div class="pricing-box animate-fadeInUp">
+                    <h3>Pricing</h3>
+                    <div class="price" id="servicePrice">$45 <small>/ pair</small></div>
+                    <ul id="priceFeatures">
+                        <li><i class="fas fa-check"></i> Free pickup & delivery</li>
+                        <li><i class="fas fa-check"></i> Premium materials included</li>
+                        <li><i class="fas fa-check"></i> Satisfaction guaranteed</li>
+                    </ul>
+                    <a href="#" class="btn-primary btn-block" id="bookNowBtn2"><i class="fas fa-calendar-check"></i> Schedule Pickup</a>
+                    <p style="font-size: 0.8rem; color: var(--text-light); margin-top: 16px; text-align: center;">*Price may vary based on shoe type and materials</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="related-section">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 20px;">
+                <span class="hero-badge" style="background-color: var(--secondary); display: inline-block;">You May Also Like</span>
+                <h2 style="margin-top: 15px;">Related Services</h2>
+            </div>
+            <div class="related-grid" id="relatedServices">
+                <!-- Dynamic related services will be populated here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="logo"><div class="logo-icon"><i class="fas fa-shoe-prints"></i></div><span class="logo-text">Sole<span>Restore</span></span></a>
+                    <p>Premium mobile shoe repair and leather restoration services. We bring expert craftsmanship directly to your doorstep.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div><h4>Services</h4><ul class="footer-links"><li><a href="#">Sole Replacement</a></li><li><a href="#">Leather Restoration</a></li><li><a href="#">Custom Patina</a></li><li><a href="#">Heel Repair</a></li></ul></div>
+                <div><h4>Company</h4><ul class="footer-links"><li><a href="#">About Us</a></li><li><a href="#">Blog</a></li><li><a href="#">Pricing</a></li><li><a href="#">Contact</a></li></ul></div>
+                <div><h4>Newsletter</h4><p style="color:rgba(255,255,255,0.7); margin-bottom:16px;">Get shoe care tips and exclusive offers.</p><input type="email" placeholder="Your email" style="padding:12px; border-radius:10px; border:none; width:100%; background: rgba(255,255,255,0.1); color: var(--white);"></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 SoleRestore. All rights reserved.</p><div><a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none; margin-right: 20px;">Privacy Policy</a><a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none;">Terms of Service</a></div></div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        // Services Database
+        const servicesData = {
+            'sole-replacement': {
+                title: 'Sole Replacement',
+                badge: 'Most Popular',
+                shortDesc: 'Professional sole replacement using premium Vibram or Italian leather soles.',
+                fullDesc: 'Our sole replacement service restores your beloved footwear to like-new condition. Using premium Vibram or Italian leather soles, we carefully remove the worn sole, prepare the surface, and attach the new sole with precision stitching or bonding. Each pair undergoes quality inspection before return.',
+                price: '$45',
+                image: 'https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1600&h=600&dpr=2',
+                included: ['Premium Vibram or Italian leather soles', 'Full sole and heel replacement', 'Original stitch pattern matching', 'Edge finishing and polishing', '6-month workmanship warranty']
+            },
+            'leather-restoration': {
+                title: 'Leather Restoration',
+                badge: 'Premium Care',
+                shortDesc: 'Deep cleaning, conditioning, and color restoration for leather goods.',
+                fullDesc: 'Our leather restoration service revives tired, faded, or damaged leather. We deep clean, condition, and restore color to bring back the original luster. Perfect for bags, jackets, shoes, and furniture.',
+                price: '$35',
+                image: 'https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&w=1600&h=600&dpr=2',
+                included: ['Deep cleaning treatment', 'Premium leather conditioning', 'Color matching & restoration', 'Scratch & stain removal', 'Protective sealant application']
+            },
+            'heel-repair': {
+                title: 'Heel Repair',
+                badge: 'Quick Fix',
+                shortDesc: 'Expert heel repair and replacement for all types of footwear.',
+                fullDesc: 'From worn heel tips to broken heel blocks, our heel repair service restores stability and comfort. We use premium materials and ensure proper alignment for lasting durability.',
+                price: '$25',
+                image: 'https://images.pexels.com/photos/1124466/pexels-photo-1124466.jpeg?auto=compress&cs=tinysrgb&w=1600&h=600&dpr=2',
+                included: ['Heel tip replacement', 'Heel block repair', 'Structural reinforcement', 'Stabilization check', '3-month warranty']
+            },
+            'custom-patina': {
+                title: 'Custom Patina',
+                badge: 'Artisan Service',
+                shortDesc: 'Hand-applied patina finishes for unique character.',
+                fullDesc: 'Transform ordinary shoes into works of art with our custom patina service. Using hand-mixed pigments and traditional techniques, we create unique, vintage-inspired finishes.',
+                price: '$85',
+                image: 'https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1600&h=600&dpr=2',
+                included: ['Hand-mixed pigments', 'Multiple color options', 'High-gloss or matte finish', 'Wax & polish finish', 'Care instructions included']
+            }
+        };
+
+        // Get service from URL parameter
+        function getServiceFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            const service = params.get('service');
+            return servicesData[service] || servicesData['sole-replacement'];
+        }
+
+        // Update page content dynamically
+        function updatePageContent(service) {
+            document.getElementById('serviceBadge').textContent = service.badge;
+            document.getElementById('serviceTitle').textContent = service.title;
+            document.getElementById('serviceShortDesc').textContent = service.shortDesc;
+            document.getElementById('fullDescription').textContent = service.fullDesc;
+            document.getElementById('servicePrice').innerHTML = `${service.price} <small>/ pair</small>`;
+            
+            // Update included list
+            const includedList = document.getElementById('includedList');
+            includedList.innerHTML = '';
+            service.included.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'feature-item';
+                li.innerHTML = `<i class="fas fa-check-circle"></i><span>${item}</span>`;
+                includedList.appendChild(li);
+            });
+            
+            // Update hero background image
+            const heroSection = document.getElementById('heroSection');
+            heroSection.style.backgroundImage = `url('${service.image}')`;
+            
+            // Update page title
+            document.title = `SoleRestore | ${service.title} - Service Details`;
+        }
+
+        // Load related services
+        function loadRelatedServices(currentServiceTitle) {
+            const relatedGrid = document.getElementById('relatedServices');
+            const allServices = Object.entries(servicesData);
+            const related = allServices.filter(([key, val]) => val.title !== currentServiceTitle).slice(0, 3);
+            
+            relatedGrid.innerHTML = '';
+            related.forEach(([key, service]) => {
+                const card = document.createElement('a');
+                card.href = `service-details.html?service=${key}`;
+                card.className = 'related-card';
+                card.innerHTML = `
+                    <i class="fas fa-arrow-right"></i>
+                    <h4>${service.title}</h4>
+                    <p>${service.shortDesc.substring(0, 80)}...</p>
+                `;
+                relatedGrid.appendChild(card);
+            });
+        }
+
+        // Initialize page
+        const currentService = getServiceFromURL();
+        updatePageContent(currentService);
+        loadRelatedServices(currentService.title);
+
+        // Theme Toggle
+        const html = document.documentElement;
+        const theme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', theme);
+        function updateIcons() { 
+            const isDark = html.getAttribute('data-theme') === 'dark'; 
+            document.querySelectorAll('#desktopThemeIcon, .mobile-theme-toggle i').forEach(icon => { 
+                if(icon) icon.className = `fas ${isDark ? 'fa-sun' : 'fa-moon'}`; 
+            }); 
+        }
+        updateIcons();
+        document.querySelectorAll('#desktopThemeToggle, #mobileThemeToggle').forEach(btn => { 
+            btn?.addEventListener('click', () => { 
+                const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; 
+                html.setAttribute('data-theme', newTheme); 
+                localStorage.setItem('theme', newTheme); 
+                updateIcons(); 
+            }); 
+        });
+        
+        // RTL Toggle
+        const dir = localStorage.getItem('direction') || 'ltr';
+        html.setAttribute('dir', dir);
+        function updateRtlIcon() { 
+            const isRtl = html.getAttribute('dir') === 'rtl'; 
+            document.querySelectorAll('#desktopRtlToggle i, #mobileRtlToggle i').forEach(icon => { 
+                if(icon) icon.className = `fas ${isRtl ? 'fa-arrow-left' : 'fa-arrow-right'}`; 
+            }); 
+        }
+        updateRtlIcon();
+        document.querySelectorAll('#desktopRtlToggle, #mobileRtlToggle').forEach(btn => { 
+            btn?.addEventListener('click', () => { 
+                const newDir = html.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl'; 
+                html.setAttribute('dir', newDir); 
+                localStorage.setItem('direction', newDir); 
+                updateRtlIcon(); 
+            }); 
+        });
+        
+        // Mobile Menu
+        const mobileBtn = document.getElementById('mobileMenuBtn'), mobileMenu = document.getElementById('mobileMenu'), closeBtn = document.getElementById('mobileCloseBtn');
+        mobileBtn?.addEventListener('click', () => mobileMenu.classList.add('active'));
+        closeBtn?.addEventListener('click', () => mobileMenu.classList.remove('active'));
+        document.querySelectorAll('.mobile-nav-link').forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('active')));
+        
+        // Scroll Top
+        const scrollTop = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => scrollTop.classList.toggle('visible', window.scrollY > 300));
+        scrollTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        
+        // Book Now buttons
+        const bookButtons = document.querySelectorAll('#bookNowBtn, #bookNowBtn2');
+        bookButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert(`📅 Book ${currentService.title}\n\nFree pickup will be scheduled. Our team will contact you within 24 hours.`);
+            });
+        });
+    </script>
+</body>
+</html>
