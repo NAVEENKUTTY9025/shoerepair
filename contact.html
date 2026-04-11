@@ -985,25 +985,77 @@
             </div>
 
             <!-- Contact Form -->
-            <div class="contact-form-card animate-fadeInUp">
-                <h3>Send Us a Message</h3>
-                <p class="form-subtitle">For urgent inquiries, please call us directly. We'll respond within 24 hours.</p>
-                <div class="success-message" id="successMessage">
-                    <i class="fas fa-check-circle"></i> Thank you! Your message has been sent. We'll get back to you soon.
-                </div>
-                <form id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group"><label>Full Name *</label><input type="text" id="fullName" placeholder="John Doe" required></div>
-                        <div class="form-group"><label>Email Address *</label><input type="email" id="email" placeholder="john@example.com" required></div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group"><label>Phone Number</label><input type="tel" id="phone" placeholder="(212) 555-0123"></div>
-                        <div class="form-group"><label>Service Interest *</label><select id="service" required><option value="">Select a service</option><option>Sole Replacement</option><option>Leather Restoration</option><option>Heel Repair</option><option>Custom Patina</option><option>Stitching Repair</option><option>Other</option></select></div>
-                    </div>
-                    <div class="form-group"><label>Message *</label><textarea id="message" placeholder="Tell us about your shoes or leather item that needs restoration..." required></textarea></div>
-                    <button type="submit" class="btn-primary submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
-                </form>
+           <div class="contact-form-card animate-fadeInUp">
+    <h3>Send Us a Message</h3>
+    <p class="form-subtitle">For urgent inquiries, please call us directly. We'll respond within 24 hours.</p>
+
+    <div class="success-message" id="successMessage">
+        <i class="fas fa-check-circle"></i> Thank you! Your message has been sent. We'll get back to you soon.
+    </div>
+
+    <form id="contactForm">
+
+        <!-- Row 1 -->
+        <div class="form-row">
+            <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" id="fullName" placeholder="John Doe" required>
             </div>
+            <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" id="email" placeholder="john@example.com" required>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="form-row">
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" id="phone" placeholder="(212) 555-0123">
+            </div>
+            <div class="form-group">
+                <label>Service Interest *</label>
+                <select id="service" required>
+                    <option value="">Select a service</option>
+                    <option>Sole Replacement</option>
+                    <option>Leather Restoration</option>
+                    <option>Heel Repair</option>
+                    <option>Custom Patina</option>
+                    <option>Stitching Repair</option>
+                    <option>Other</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- ✅ NEW SECTION (Clean & Useful) -->
+        <div class="form-row">
+            <div class="form-group">
+                <label>Preferred Contact Method</label>
+                <select id="contactMethod">
+                    <option>Email</option>
+                    <option>Phone</option>
+                    <option>WhatsApp</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Best Time to Contact</label>
+                <input type="text" id="contactTime" placeholder="e.g. Morning / Afternoon / Evening">
+            </div>
+        </div>
+
+        <!-- Message -->
+        <div class="form-group">
+            <label>Message *</label>
+            <textarea id="message" placeholder="Tell us about your shoes or leather item that needs restoration..." required></textarea>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn-primary submit-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+
+    </form>
+</div>
         </div>
     </div>
 
