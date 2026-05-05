@@ -47,9 +47,9 @@
             --secondary: #8B5E3C;
             --accent: #A47148;
             --white: #FFFFFF;
-            --bg-main: #0A0A0A;
-            --bg-alt: #141414;
-            --bg-card: #1A1A1A;
+            --bg-main: #000000;
+            --bg-alt: #000000;
+            --bg-card: #0A0A0A;
             --text-heading: #FFFFFF;
             --text-body: #CCCCCC;
             --text-light: #999999;
@@ -238,6 +238,18 @@
 
         .logo-text span {
             color: var(--secondary);
+        }
+
+        /* Dark Mode Logo Overrides */
+        [data-theme="dark"] .logo-text,
+        [data-theme="dark"] .logo-text span {
+            color: var(--white);
+        }
+        [data-theme="dark"] .logo-icon {
+            background-color: var(--white);
+        }
+        [data-theme="dark"] .logo-icon i {
+            color: #000000;
         }
 
         .brand-content h2 {

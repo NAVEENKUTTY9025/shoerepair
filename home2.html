@@ -31,7 +31,8 @@
             --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
             --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
             --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
-            --navbar-bg: #111111;
+            --navbar-bg: #FFFFFF;
+            --navbar-text: #111111;
             --footer-bg: #111111;
         }
 
@@ -53,6 +54,7 @@
             --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
             --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
             --navbar-bg: #0A0A0A;
+            --navbar-text: #FFFFFF;
             --footer-bg: #0A0A0A;
         }
 
@@ -200,7 +202,7 @@
         }
 
         .nav-link {
-            color: var(--white);
+            color: var(--navbar-text);
             text-decoration: none;
             padding: 10px 16px;
             font-weight: 500;
@@ -255,7 +257,7 @@
         .dropdown-item {
             display: block;
             padding: 12px 20px;
-            color: var(--white);
+            color: var(--navbar-text);
             text-decoration: none;
             transition: all 0.3s ease;
             border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -283,7 +285,7 @@
             background-color: rgba(255,255,255,0.1);
             border: none;
             border-radius: 10px;
-            color: var(--white);
+            color: var(--navbar-text);
             font-size: 1.1rem;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -301,7 +303,7 @@
             display: none;
             background: transparent;
             border: none;
-            color: var(--white);
+            color: var(--navbar-text);
             font-size: 1.8rem;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -350,7 +352,7 @@
             background-color: rgba(255,255,255,0.1);
             border: none;
             border-radius: 10px;
-            color: var(--white);
+            color: var(--navbar-text);
             font-size: 1.2rem;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -365,7 +367,7 @@
             background-color: rgba(255,255,255,0.1);
             border: none;
             border-radius: 10px;
-            color: var(--white);
+            color: var(--navbar-text);
             font-size: 1.5rem;
             cursor: pointer;
             display: flex;
@@ -375,7 +377,7 @@
 
         .mobile-nav-link {
             display: block;
-            color: var(--white);
+            color: var(--navbar-text);
             text-decoration: none;
             padding: 16px;
             font-size: 1.1rem;
@@ -443,7 +445,7 @@
 
         .btn-outline {
             background: transparent;
-            color: var(--white);
+            color: var(--navbar-text);
             border: 2px solid rgba(255,255,255,0.3);
             padding: 10px 20px;
             border-radius: 10px;
@@ -1000,6 +1002,18 @@
             .hero p { font-size: 1rem; }
             .hero-buttons { flex-direction: column; align-items: center; }
         }
+    
+        /* Dark Mode Logo Overrides */
+        [data-theme="dark"] .navbar .logo-text,
+        [data-theme="dark"] .navbar .logo-text span {
+            color: var(--white);
+        }
+        [data-theme="dark"] .navbar .logo-icon {
+            background-color: var(--white);
+        }
+        [data-theme="dark"] .navbar .logo-icon i {
+            color: #000000;
+        }
     </style>
 </head>
 <body>
@@ -1051,7 +1065,7 @@
                 <div class="service-card animate-fadeInUp"><div class="service-icon"><i class="fas fa-shoe-prints"></i></div><h3>Sole Replacement</h3><p>Full sole and heel replacement using premium Vibram or leather soles for extended life.</p></div>
                 <div class="service-card animate-fadeInUp"><div class="service-icon"><i class="fas fa-brush"></i></div><h3>Leather Restoration</h3><p>Deep cleaning and conditioning for bags, jackets, and all leather goods.</p></div>
                 <div class="service-card animate-fadeInUp"><div class="service-icon"><i class="fas fa-palette"></i></div><h3>Custom Patina</h3><p>Hand-applied patina for unique, one-of-a-kind finishes on your footwear.</p></div>
-                <div class="service-card animate-fadeInUp"><div class="service-icon"><i class="fas fa-stitch"></i></div><h3>Stitching Repairs</h3><p>Expert stitching repair using industrial-grade machines with perfect color matching.</p></div>
+                <div class="service-card animate-fadeInUp"><div class="service-icon"><i class="fas fa-hands"></i></div><h3>Stitching Repairs</h3><p>Expert stitching repair using industrial-grade machines with perfect color matching.</p></div>
             </div>
         </div>
     </section>

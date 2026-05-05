@@ -31,7 +31,8 @@
             --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
             --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
             --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
-            --navbar-bg: #111111;
+            --navbar-bg: #FFFFFF;
+            --navbar-text: #111111;
             --footer-bg: #111111;
             --success: #10B981;
             --popular-bg: linear-gradient(135deg, #8B5E3C 0%, #A47148 100%);
@@ -55,6 +56,7 @@
             --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
             --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
             --navbar-bg: #0A0A0A;
+            --navbar-text: #FFFFFF;
             --footer-bg: #0A0A0A;
         }
 
@@ -207,7 +209,7 @@
         }
 
         .nav-link {
-            color: var(--white);
+            color: var(--navbar-text);
             text-decoration: none;
             padding: 10px 16px;
             font-weight: 500;
@@ -262,7 +264,7 @@
         .dropdown-item {
             display: block;
             padding: 12px 20px;
-            color: var(--white);
+            color: var(--navbar-text);
             text-decoration: none;
             transition: all 0.3s ease;
             border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -290,7 +292,7 @@
             background-color: rgba(255,255,255,0.1);
             border: none;
             border-radius: 10px;
-            color: var(--white);
+            color: var(--navbar-text);
             font-size: 1.1rem;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -308,7 +310,7 @@
             display: none;
             background: transparent;
             border: none;
-            color: var(--white);
+            color: var(--navbar-text);
             font-size: 1.8rem;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -357,7 +359,7 @@
             background-color: rgba(255,255,255,0.1);
             border: none;
             border-radius: 10px;
-            color: var(--white);
+            color: var(--navbar-text);
             font-size: 1.2rem;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -372,7 +374,7 @@
             background-color: rgba(255,255,255,0.1);
             border: none;
             border-radius: 10px;
-            color: var(--white);
+            color: var(--navbar-text);
             font-size: 1.5rem;
             cursor: pointer;
             display: flex;
@@ -382,7 +384,7 @@
 
         .mobile-nav-link {
             display: block;
-            color: var(--white);
+            color: var(--navbar-text);
             text-decoration: none;
             padding: 16px;
             font-size: 1.1rem;
@@ -450,7 +452,7 @@
 
         .btn-outline {
             background: transparent;
-            color: var(--white);
+            color: var(--navbar-text);
             border: 2px solid rgba(255,255,255,0.3);
             padding: 10px 20px;
             border-radius: 10px;
@@ -1047,6 +1049,18 @@
             .hero { min-height: 40vh; }
             .hero p { font-size: 1rem; }
         }
+    
+        /* Dark Mode Logo Overrides */
+        [data-theme="dark"] .navbar .logo-text,
+        [data-theme="dark"] .navbar .logo-text span {
+            color: var(--white);
+        }
+        [data-theme="dark"] .navbar .logo-icon {
+            background-color: var(--white);
+        }
+        [data-theme="dark"] .navbar .logo-icon i {
+            color: #000000;
+        }
     </style>
 </head>
 <body>
@@ -1054,7 +1068,7 @@
         <div class="container">
             <a href="index.html" class="logo"><div class="logo-icon"><i class="fas fa-shoe-prints"></i></div><span class="logo-text">Sole<span>Restore</span></span></a>
             <div class="nav-menu">
-                <div class="dropdown"><a href="index.html" class="nav-link">Home <i class="fas fa-chevron-down"></i></a><div class="dropdown-menu"><a href="index.html" class="dropdown-item">Home 1</a><a href="#" class="dropdown-item">Home 2</a></div></div>
+                <div class="dropdown"><a href="index.html" class="nav-link">Home <i class="fas fa-chevron-down"></i></a><div class="dropdown-menu"><a href="index.html" class="dropdown-item">Home 1</a><a href="home2.html" class="dropdown-item">Home 2</a></div></div>
                 <a href="about.html" class="nav-link">About</a><a href="service.html" class="nav-link">Services</a>
                 <a href="gallery.html" class="nav-link">Gallery</a><a href="pricing.html" class="nav-link active">Pricing</a>
                 <a href="blog.html" class="nav-link">Blog</a><a href="contact.html" class="nav-link">Contact</a>
@@ -1094,7 +1108,7 @@
                 <div class="pricing-card animate-fadeInUp">
                     <div class="card-header"><h3>Essential</h3><div class="price">$49<span>/pair</span></div><div class="price-note">+ free pickup</div></div>
                     <div class="card-body"><ul class="plan-features"><li><i class="fas fa-check"></i> Basic Sole Cleaning</li><li><i class="fas fa-check"></i> Heel Tip Replacement</li><li><i class="fas fa-check"></i> Basic Polish & Shine</li><li><i class="fas fa-check"></i> Lace Replacement</li><li><i class="fas fa-times"></i> Leather Conditioning</li><li><i class="fas fa-times"></i> Color Restoration</li></ul></div>
-                    <div class="card-footer"><a href="contact.html" class="btn-plan btn-plan-outline">Choose Plan</a></div>
+                    <div class="card-footer"><a href="contact.html" class="btn-plan btn-plan-primary">Choose Plan</a></div>
                 </div>
                 <div class="pricing-card popular animate-fadeInUp"><div class="popular-badge">🔥 MOST POPULAR</div>
                     <div class="card-header"><h3>Premium</h3><div class="price">$89<span>/pair</span></div><div class="price-note">+ free pickup & delivery</div></div>
@@ -1104,7 +1118,7 @@
                 <div class="pricing-card animate-fadeInUp">
                     <div class="card-header"><h3>Luxury</h3><div class="price">$149<span>/pair</span></div><div class="price-note">+ priority service</div></div>
                     <div class="card-body"><ul class="plan-features"><li><i class="fas fa-check"></i> Everything in Premium</li><li><i class="fas fa-check"></i> Custom Patina Application</li><li><i class="fas fa-check"></i> Full Color Restoration</li><li><i class="fas fa-check"></i> Waterproofing Treatment</li><li><i class="fas fa-check"></i> Premium Italian Leather Care</li><li><i class="fas fa-check"></i> 2-Year Warranty</li></ul></div>
-                    <div class="card-footer"><a href="contact.html" class="btn-plan btn-plan-outline">Choose Plan</a></div>
+                    <div class="card-footer"><a href="contact.html" class="btn-plan btn-plan-primary">Choose Plan</a></div>
                 </div>
             </div>
         </div>

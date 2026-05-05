@@ -31,7 +31,8 @@
             --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
             --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
             --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
-            --navbar-bg: #111111;
+            --navbar-bg: #FFFFFF;
+            --navbar-text: #111111;
             --footer-bg: #111111;
         }
 
@@ -53,6 +54,7 @@
             --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
             --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
             --navbar-bg: #0A0A0A;
+            --navbar-text: #FFFFFF;
             --footer-bg: #0A0A0A;
         }
 
@@ -189,7 +191,7 @@
         }
 
         .nav-link {
-            color: var(--white);
+            color: var(--navbar-text);
             text-decoration: none;
             padding: 10px 16px;
             font-weight: 500;
@@ -244,7 +246,7 @@
         .dropdown-item {
             display: block;
             padding: 12px 20px;
-            color: var(--white);
+            color: var(--navbar-text);
             text-decoration: none;
             transition: all 0.3s ease;
             border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -272,7 +274,7 @@
             background-color: rgba(255,255,255,0.1);
             border: none;
             border-radius: 10px;
-            color: var(--white);
+            color: var(--navbar-text);
             font-size: 1.1rem;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -290,7 +292,7 @@
             display: none;
             background: transparent;
             border: none;
-            color: var(--white);
+            color: var(--navbar-text);
             font-size: 1.8rem;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -335,7 +337,7 @@
             background-color: rgba(255,255,255,0.1);
             border: none;
             border-radius: 10px;
-            color: var(--white);
+            color: var(--navbar-text);
             font-size: 1.2rem;
             cursor: pointer;
             display: flex;
@@ -349,7 +351,7 @@
             background-color: rgba(255,255,255,0.1);
             border: none;
             border-radius: 10px;
-            color: var(--white);
+            color: var(--navbar-text);
             font-size: 1.5rem;
             cursor: pointer;
             display: flex;
@@ -359,7 +361,7 @@
 
         .mobile-nav-link {
             display: block;
-            color: var(--white);
+            color: var(--navbar-text);
             text-decoration: none;
             padding: 16px;
             font-size: 1.1rem;
@@ -419,7 +421,7 @@
 
         .btn-outline {
             background: transparent;
-            color: var(--white);
+            color: var(--navbar-text);
             border: 2px solid rgba(255,255,255,0.3);
             padding: 10px 20px;
             border-radius: 10px;
@@ -818,6 +820,18 @@
     color: var(--secondary);
     padding-left: 24px;
 }
+    
+        /* Dark Mode Logo Overrides */
+        [data-theme="dark"] .navbar .logo-text,
+        [data-theme="dark"] .navbar .logo-text span {
+            color: var(--white);
+        }
+        [data-theme="dark"] .navbar .logo-icon {
+            background-color: var(--white);
+        }
+        [data-theme="dark"] .navbar .logo-icon i {
+            color: #000000;
+        }
     </style>
 </head>
 <body>
